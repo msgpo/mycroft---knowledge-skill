@@ -103,7 +103,7 @@ class KnowledgeSkill(MycroftSkill):
                 wiki.summary(results[0], self.max_phrases))
 
             wfile = open(savepath, "w")
-            wfile.write(summary)
+            wfile.write(summary.encode('utf-8'))
             wfile.close()
             #self.speak(summary)
             self.knowledge.append(summary)
@@ -128,7 +128,7 @@ class KnowledgeSkill(MycroftSkill):
                     wiki.summary(results[0], self.max_phrases))
 
                 wfile = open(savepath, "w")
-                wfile.write(summary)
+                wfile.write(summary.encode('utf-8'))
                 wfile.close()
                 #self.speak(summary)
                 self.knowledge.append(summary)
