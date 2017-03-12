@@ -79,7 +79,7 @@ class KnowledgeSkill(MycroftSkill):
             try:
                 with open(path) as f:
                     words = f.readlines()
-                    self.knowledge.append(words)
+                    self.knowledge.append(words[0])
             except:
                 pass
 
